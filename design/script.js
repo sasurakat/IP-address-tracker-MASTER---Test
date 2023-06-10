@@ -14,17 +14,6 @@ function fetchLocation() {
       .then(data => {
         const ipAddress = data.ip;
   
-        fetch('http://api.ipstack.com/' + ipAddress + '?access_key=YOUR_API_KEY')
-          .then(response => response.json())
-          .then(data => {
-            const latitude = data.latitude;
-            const longitude = data.longitude;
-  
-            
-            console.log('Latitude:', latitude);
-            console.log('Longitude:', longitude);
-          })
-          .catch(error => console.log(error));
       })
       .catch(error => console.log(error));
   }
